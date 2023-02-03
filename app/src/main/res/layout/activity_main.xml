@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#1B1B1B"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100sp"
+        android:layout_marginBottom="50sp"
+        android:gravity="center"
+        android:shadowColor="#22E6FF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="1000"
+        android:text="Quiz"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:paddingVertical="50sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FFFFFF"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:id="@+id/fullsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00CCFF"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingVertical="15sp"
+                android:shadowRadius="80"
+                android:shadowColor="@color/teal_200"
+                android:text="Explore"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvNameParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="20dp"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint=" Enter Your Name"
+                    android:maxLength="20"
+                    android:inputType="textCapWords">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnStartQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/teal_200"
+                android:backgroundTint="#00FFF7"
+                android:text="Start Quiz"
+                android:textSize="15sp"
+                android:textColor="@color/white">
+
+            </Button>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
