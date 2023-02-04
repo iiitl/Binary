@@ -8,12 +8,15 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.example.quizify.databinding.ActivityMainBinding
+import com.example.quizify.databinding.ActivityQuestionsBinding
 
 import kotlinx.android.synthetic.main.activity_questions.*
 
 var score = 0
 
 class QuestionsActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityQuestionsBinding
     private var currentQuestionId = -1
     private var selectedAnswers = mutableMapOf<Int, String>()
 
@@ -21,9 +24,10 @@ class QuestionsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_questions)
+        binding = ActivityQuestionsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val allOptions = arrayListOf(Option1, Option2, Option3, Option4)
+        val allOptions = arrayListOf(Option1, Option2, Option3, Option4, Option5)
         val questions: ArrayList<Question> = getQuestions()
 
         fun changeQuestion() {
@@ -47,37 +51,42 @@ class QuestionsActivity : AppCompatActivity() {
             Option2.text = question.option2
             Option3.text = question.option3
             Option4.text = question.option4
+            Option5.text = question.option5
         }
 
           fun animate(){
             YoYo.with(Techniques.BounceInDown)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.ivQuestion));
+                .playOn(binding.ivQuestion);
             YoYo.with(Techniques.BounceInDown)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.tvQuestion));
+                .playOn(binding.tvQuestion);
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.Option1));
+                .playOn(binding.Option1);
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.Option2));
+                .playOn(binding.Option2);
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.Option3));
+                .playOn(binding.Option3);
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.Option4));
+                .playOn(binding.Option4);
+            YoYo.with(Techniques.BounceInUp)
+                  .duration(1000)
+                  .repeat(0)
+                  .playOn(findViewById(R.id.Option5));
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)
-                .playOn(findViewById(R.id.btnSubmitAnswer));
+                .playOn(binding.btnSubmitAnswer);
 
         }
 

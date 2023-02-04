@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:indeterminate="false"
-                        android:max="5"
+                        android:max="3"
                         android:minHeight="30dp"
                         android:padding="13dp"
                         android:progress="2"
@@ -124,6 +124,17 @@
             android:textColor="#7A8089"
             android:textSize="18sp"
             tools:text="4rth Option"/>
+        <TextView
+            android:id="@+id/Option5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/cardview_dark_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            tools:text="5rth Option"/>
 
         <Button
             android:id="@+id/btnSubmitAnswer"
@@ -131,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="SUBMIT"
-            android:background="@color/teal_200"
+            android:background="@drawable/submit_btn_background"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
