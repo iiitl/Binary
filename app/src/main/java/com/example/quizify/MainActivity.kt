@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import kotlinx.android.synthetic.main.activity_main.*
@@ -39,9 +40,11 @@ class MainActivity : AppCompatActivity() {
 
             if (tvName.text.toString().isEmpty()) {
                 tvNameParent.error = "Please provide a name"
+                Toast.makeText(this,"Please provide a name",Toast.LENGTH_SHORT).show()
             } else {
 
                 name = tvName.text.toString()
+                Toast.makeText(this,"All the best $name !",Toast.LENGTH_SHORT).show()
                 startActivity(
                     Intent(
                         this,
