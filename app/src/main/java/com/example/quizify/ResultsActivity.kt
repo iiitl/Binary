@@ -6,22 +6,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.example.quizify.databinding.ActivityResultsBinding
 import kotlinx.android.synthetic.main.activity_results.*
 
 
 class ResultsActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityResultsBinding
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_results)
+        binding = ActivityResultsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         YoYo.with(Techniques.Tada)
             .duration(1000)
             .repeat(0)
-            .playOn(findViewById(R.id.NameResult));
+            .playOn(binding.NameResult);
         YoYo.with(Techniques.Tada)
             .duration(1000)
             .repeat(0)
-            .playOn(findViewById(R.id.congo));
+            .playOn(binding.congo);
         NameResult.text = "Sensational $name"
         Score.text = "Your have scored  $score/${getQuestions().size}"
 
