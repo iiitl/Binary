@@ -23,7 +23,7 @@ class QuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
 
-        val allOptions = arrayListOf(Option1, Option2, Option3, Option4)
+        val allOptions = arrayListOf(Option1, Option2, Option3, Option4, Option5)
         val questions: ArrayList<Question> = getQuestions()
 
         fun changeQuestion() {
@@ -47,6 +47,7 @@ class QuestionsActivity : AppCompatActivity() {
             Option2.text = question.option2
             Option3.text = question.option3
             Option4.text = question.option4
+            Option5.text = question.option5
         }
 
           fun animate(){
@@ -74,6 +75,10 @@ class QuestionsActivity : AppCompatActivity() {
                 .duration(1000)
                 .repeat(0)
                 .playOn(findViewById(R.id.Option4));
+            YoYo.with(Techniques.BounceInUp)
+                  .duration(1000)
+                  .repeat(0)
+                  .playOn(findViewById(R.id.Option5));
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)

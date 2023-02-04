@@ -8,6 +8,7 @@ data class Question(
     val option2: String,
     val option3: String,
     val option4: String,
+    val option5: String,
     val correctAnswer: String
 )
 
@@ -24,6 +25,7 @@ fun getQuestions(): ArrayList<Question> {
             "Desktops",
             "Laptops",
             "Mobile devices",
+            "Routers",
             "Mobile devices"
         )
     )
@@ -37,6 +39,7 @@ fun getQuestions(): ArrayList<Question> {
             "Android Programming Interface",
             "Android Page Interface",
             "Application Page Interface",
+            "Android Powerful Interface",
             "Application Programming Interface"
         )
     )
@@ -50,6 +53,7 @@ fun getQuestions(): ArrayList<Question> {
             "Windows",
             "Linux",
             "Redhat",
+            "Black Berry",
             "Linux"
         )
     )
