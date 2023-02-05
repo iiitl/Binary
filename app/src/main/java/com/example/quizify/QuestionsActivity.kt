@@ -82,7 +82,7 @@ class QuestionsActivity : AppCompatActivity() {
             YoYo.with(Techniques.BounceInUp)
                   .duration(1000)
                   .repeat(0)
-                  .playOn(findViewById(R.id.Option5));
+                  .playOn(binding.Option5);
             YoYo.with(Techniques.BounceInUp)
                 .duration(1000)
                 .repeat(0)

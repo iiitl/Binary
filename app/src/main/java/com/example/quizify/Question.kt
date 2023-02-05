@@ -57,5 +57,32 @@ fun getQuestions(): ArrayList<Question> {
             "Linux"
         )
     )
+    questions.add(
+        Question(
+            3,
+            "Most of Android versions are named after?",
+            R.drawable.android,
+            "Chillies",
+            "Deserts",
+            "Fruits",
+            "Drinks",
+            "Vegetables",
+            "Deserts"
+        )
+    )
+
+    questions.add(
+        Question(
+            4,
+            "What is meaning of word Android?",
+            R.drawable.android,
+            "Operating System",
+            "Male Humanoid Robot",
+            "Sweet",
+            "Technologically Advanced",
+            "Automation",
+            "Male Humanoid Robot"
+        )
+    )
     return questions
 }
