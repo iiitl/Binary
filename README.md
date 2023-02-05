@@ -15,4 +15,5 @@ It congratulates the user with their name and shows them their score.
 # Technologies used
 Kotlin is used with Android Studio.
 
-
+# Name
+This project is now handled by Umesh Singh Verma
