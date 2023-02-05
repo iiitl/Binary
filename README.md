@@ -17,3 +17,4 @@ Kotlin is used with Android Studio.
 
 # Name
 This project is now handled by Umesh Singh Verma
+This is under the foss weekend
