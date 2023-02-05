@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B1B1B"
+    android:background="#E4CD88"
     android:orientation="vertical">
 
     <ImageView
@@ -17,37 +17,37 @@
         android:id="@+id/NameResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sensational Name"
-        android:gravity="center"
         android:layout_marginTop="0sp"
+        android:gravity="center"
+        android:shadowColor="#050505"
+        android:text="Sensational Name"
+        android:textColor="@color/black"
         android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold">
-    </TextView>
+        android:textStyle="bold"></TextView>
 
     <TextView
         android:id="@+id/Score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="You have scored 1/5"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/white"
         android:layout_marginTop="20sp"
         android:alpha="0.7"
-        android:textStyle="bold">
-    </TextView>
+        android:gravity="center"
+        android:shadowColor="#F3DC17"
+        android:text="You have scored 1/5"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"></TextView>
 
     <Button
         android:id="@+id/btnFinish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="FINISH"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/teal_200"
+        android:text="FINISH"
         android:textColor="#000000"
-        android:textSize="15sp"
-        android:layout_marginHorizontal="20dp">
+        android:textSize="15sp">
 
     </Button>
 
