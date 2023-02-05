@@ -62,7 +62,7 @@ fun getQuestions(): ArrayList<Question> {
         Question(
             3,
             "Most of Android versions are named after?",
-            R.drawable.android,
+            R.drawable.version,
             "Chillies",
             "Deserts",
             "Fruits",
@@ -76,7 +76,7 @@ fun getQuestions(): ArrayList<Question> {
         Question(
             4,
             "What is meaning of word Android?",
-            R.drawable.android,
+            R.drawable.androidrobot,
             "Operating System",
             "Male Humanoid Robot",
             "Sweet",
