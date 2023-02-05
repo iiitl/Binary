@@ -57,5 +57,33 @@ fun getQuestions(): ArrayList<Question> {
             "Linux"
         )
     )
+
+    questions.add(
+        Question(
+            3,
+            "Why you are giving this foss event?",
+            R.drawable.foss,
+            "To Win",
+            "For Knowledge",
+            "For Learing git",
+            "To show your capabilities",
+            "Just for Fun",
+            "For Knowledge"
+        )
+    )
+
+    questions.add(
+        Question(
+            4,
+            "Which operating system is owned by microsoft?",
+            R.drawable.microsoft,
+            "MAC",
+            "Windows",
+            "Linux",
+            "Redhat",
+            "Android",
+            "Windows"
+        )
+    )
     return questions
 }
