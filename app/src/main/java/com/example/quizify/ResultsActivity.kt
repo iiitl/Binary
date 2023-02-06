@@ -2,6 +2,7 @@ package com.example.quizify
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.daimajia.androidanimations.library.Techniques
@@ -27,14 +28,11 @@ class ResultsActivity : AppCompatActivity() {
             .playOn(binding.congo);
         NameResult.text = "Sensational $name"
         Score.text = "Your have scored  $score/${getQuestions().size}"
-
+        val url : String = "https://www.android.com"
         btnFinish.setOnClickListener {
             score = 0
             startActivity(
-                Intent(
-                    this,
-                    MainActivity::class.java,
-                )
+                Intent(Intent.ACTION_VIEW, Uri.parse(url))
             )
 
         }
